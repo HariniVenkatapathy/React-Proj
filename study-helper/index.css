@@ -1,0 +1,239 @@
+body{
+  background-image: url(assets/homey2.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+  align-items: center;
+}
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.642);
+  z-index: -1; 
+}
+.clock-container {
+  position: fixed; /* Make the clock container fixed */
+  top: 200px; /* Adjust as needed */
+  left: 50%;
+  transform: translateX(-50%); /* Center horizontally */
+  backdrop-filter: blur(5px);
+  width: 500px;
+  border-radius: 25px;
+  padding: 10px 0;
+  z-index: 1; /* Ensure it is above the background */
+}
+.clock{
+  color: aliceblue;
+  font-size: 4.5rem;
+  font-weight: bold;
+  font-family:monospace;
+  text-shadow: 5px 5px 5px black;
+  text-align: center;
+}
+.todo-container {
+  margin-top: 0px; /* Space for the fixed clock */
+  width: 800px; /* Match the clock container width */
+  max-height: 100vh; /* Limit height for scrolling */
+}
+.todo{
+    font-family: monospace;
+    text-align: center;
+    margin-top: 300px;
+    
+}
+h1{
+    font-size: 2rem;
+    color: rgb(255, 255, 255);
+}
+button{
+    font-size: 0.8rem;
+    font-weight: bold;
+    padding: 11px 20px;
+    color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.5 ease;
+}
+.add-button{
+    background-color: rgba(39, 77, 0, 0.73);
+}
+.add-button:hover{
+    background-color: rgb(114, 140, 88, 0.73);
+}
+.deletebutton{
+    background-color: rgba(255, 41, 41, 0.373);
+}
+.deletebutton:hover{
+    background-color: rgba(244, 115, 115, 0.642);
+}
+.upbutton{
+    background-color: rgba(77, 41, 255, 0.374);
+}
+.upbutton:hover{
+    background-color: rgba(116, 90, 247, 0.441);
+}
+.downbutton{
+    background-color: rgb(77, 41, 255, 0.374);
+}
+.downbutton:hover{
+    background-color: rgb(116, 90, 247, 0.441);
+}
+input[type="text"]{
+    font-size: 0.8rem;
+    padding: 10px;
+    border: 2px solid rgba(42, 42, 42, 0.475);
+    border-radius: 5px;
+    color: rgb(0, 0, 0);
+    margin-right: 10px;
+}
+ol{
+    padding: 0;
+}
+li{
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 10px;
+    backdrop-filter: blur(2px);
+    margin-bottom: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.753);
+    border-radius: 5px;
+    display: flex;
+    color: rgb(227, 227, 227);
+    align-items: center;
+}
+.text{
+    flex-grow: 1;
+}
+.deletebutton,.upbutton,.downbutton{
+    padding: 2px 7px;
+    font-size: 0.7rem;
+    margin-left: 10px;
+}
+.pomo{
+    position: fixed;
+    top: 350px;
+    left: 15%;
+}
+.but1{
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.753);
+    background-color: rgba(0, 0, 0, 0);
+    width: 200px;
+    height: 50px;
+}
+.stop{
+    position: fixed;
+    top: 350px;
+    left: 73%;
+}
+.but2{
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.753);
+    background-color: rgba(0, 0, 0, 0);
+    width: 200px;
+    height: 50px;
+}
+.stopwatch{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 5px;
+    border-radius: 50px;
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(0, 0, 0, 0.753);
+    padding: 30px;
+}
+.displaytime{
+    font-size: 5rem;
+    font-family: monospace;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.852);
+    margin-bottom: 25px;
+
+}
+.controls button{
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 10px 20px;
+    margin: 5px;
+    min-width: 125px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    color: rgb(236, 236, 236);
+    transition: background-color 0.5s ease;
+}
+.start-button{
+    background-color: rgba(60, 98, 2, 0.585);  
+}
+.start-button:hover{
+    background-color: rgba(82, 136, 2, 0.647);  
+}
+.stop-button{
+    background-color: rgba(115, 2, 2, 0.519);  
+}
+.stop-button:hover{
+    background-color: rgba(115, 2, 2, 0.619);  
+}  
+.reset-button{
+    background-color: rgb(2, 60, 98, 0.519);  
+}
+.reset-button:hover{
+    background-color: rgb(47, 78, 135, 0.619);  
+}
+.pomodo{
+    color: rgb(255, 255, 255);
+}
+.shawt{
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.753);
+    background-color: rgba(0, 0, 0, 0);
+    width: 200px;
+    height: 50px;
+    position: fixed;
+    top: 350px;
+    left: 30%;
+}
+.long{
+     backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.753);
+    background-color: rgba(0, 0, 0, 0);
+    width: 200px;
+    height: 50px;
+    position: fixed;
+    top: 350px;
+    left: 57%;
+}
+.pomodoro-timer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 5px;
+    border-radius: 50px;
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(0, 0, 0, 0.753);
+    padding: 30px;
+}
+.controls{
+     font-size: 1.5rem;
+    font-weight: bold;
+    padding: 10px 20px;
+    margin: 5px;
+    min-width: 125px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    color: rgb(236, 236, 236);
+    transition: background-color 0.5s ease;
+}
